@@ -1,0 +1,132 @@
+html, body{
+    height: 100%;
+    margin:0;
+}
+
+#left{
+    float:left;
+    width: 80%;
+    height: 100%;
+    margin-right: -8px;
+}
+
+#start_box{
+    margin-top: 20%;
+    margin-bottom: 20%;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+#start{
+    width: 200px;
+    height: 200px;
+    font-family: fantasy;
+    font-size: 80px;
+    color:white;
+    background-color: dodgerblue;
+}
+
+#start:hover{
+    box-shadow: 5px 5px black;
+    text-shadow: 5px 5px black;
+}
+
+.dropNum{   
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    text-align: center;
+}
+
+.numbox_top{
+    width: 10%;
+    height: 100%;
+    text-align: center;
+    background-color: skyblue;
+    color:white;
+    margin-right: 1%;
+    font-family: fantasy;
+    font-size: 80px;
+}
+    
+.numbox_bottom{
+    width: 10%;
+    height: 100%;
+    text-align: center;
+    margin-right: 0;
+    background-color: paleturquoise;
+    color:white;
+    font-family:fantasy;
+    margin-right: 1%;
+    display: none;
+    transition: all 0.3s;
+    font-size: 80px;
+}
+
+.numbox_bottom:hover{
+    width: 12%;
+    border: dashed 4px white;
+    box-shadow: 5px 5px black;
+}
+
+.top_hover{
+    transition: all 0.3s;
+    width:12%;
+    height: 110%;
+    border :dashed 4px white;
+    box-shadow: 5px 5px black;
+}
+
+.dragNum{
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    text-align: center;
+}
+
+
+#right{
+    float:left;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    background-color: skyblue;
+}
+
+#timer{
+    display: inline-block;
+    width: 90%;
+    height: 15%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 50px;
+    padding-top: 50px;
+}
+
+#record{
+    display: inline-block;
+    width: 90%;
+    height: 60%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    background-color: white;
+    font-family: fantasy;
+    font-size: 30px;
+    text-align: center;
+}
+
+.record_score{
+    padding-top: 30px;
+    font-family: fantasy;
+    font-size: 30px;
+}
+
+#gameName{
+    font-size:50px;
+    color:white;
+    font-family:fantasy;
+}

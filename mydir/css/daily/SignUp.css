@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-image: url('./organizer-791939_1920.jpg');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+div, ul, li, a, header{
+    box-sizing: border-box;
+}
+
+@font-face{
+    src:url("./BRLNSDB.TTF");
+    font-family: "logo";
+}
+
+@font-face{
+    src:url("./BMJUA_ttf.ttf");
+    font-family: "yoon";
+}
+
+#logo{
+    position: absolute;
+    top:3%;
+    left: 2%;
+    font-size: 250%;
+    font-family: logo;
+    color:#FF0558;
+    cursor: pointer;
+}
+
+#title{
+    color: white;
+    font-size: 200%;
+    font-family: yoon;
+    padding-left: 3%;
+    margin-bottom: 3%;
+}
+
+#signUp{
+    position: absolute;
+    top:25%;
+    left:50%;
+    transform: translateX(-50%);
+    width: 30vw;
+    height: 30vh;
+}
+
+#signUpform{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+#id{
+    width: 100%;
+    height: 33%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 0px solid white;
+    border-bottom: 3px solid grey;
+    padding-left: 3%;
+    font-size: 150%;
+    font-family: yoon;
+}
+
+#password{
+    width: 100%;
+    height: 33%;
+    padding-left: 3%;
+    border: 0px solid white;  
+    border-bottom: 3px solid grey; 
+    font-size: 150%;
+    color:black;
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+    background-size: 10% 50%;
+}
+
+#passwordCheck{
+    width: 100%;
+    height: 33%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 0px solid white;
+    padding-left: 3%;
+    font-size: 150%;
+    color:black;
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+    background-size: 10% 50%;
+}
+
+input[type=password]{
+    font-family: none;
+}
+
+::placeholder{
+    font-family: yoon;
+} 
+
+#create{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform:translateX(-50%);
+    width: 20%;
+    height: 5%;
+    border:none;
+    border-radius: 30px;
+    color:white;
+    font-size: 150%;
+    font-family: yoon;
+    background-color: rgba( 255, 5, 88, 0.8 );
+    cursor: pointer;
+}

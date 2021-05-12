@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="../css/youtube/youtube.css">
+    <meta charset="utf-8">
+</head>
+<body>
+    <img src="../css/youtube/icon/title_bar.PNG" id="title_bar">
+    <a href="#" ><img src="../css/youtube/icon/logo.png" id="logo"></a> 
+    <div id="search">
+        <input type="text" placeholder="검색" id="search_box">
+        <button type="button" style="cursor: pointer;" id="button_keyboard"><img src="../css/youtube/icon/keyboard.png" id="keyboard_icon"></button>
+        <button type="button" style="cursor: pointer;" id="button_explore"><img src="../css/youtube/icon/explore.png" id="explore_icon"><span class="tooltip">검색</span></button>
+        <button type="button" style="cursor: pointer;" id="button_mic"><span class="tooltip">음성으로 검색</span><img src="../css/youtube/icon/mic.png" id="mic_icon"></button>
+    </div>
+    <div id="title_right">
+        <button type="button" style="cursor: pointer;" id="button_cam"><span class="tooltip">만들기</span><img src="../css/youtube/icon/cam.png" id="cam_icon"></button>
+        <button type="button" style="cursor: pointer;" id="button_app"><span class="tooltip">YouTube 앱</span><img src="../css/youtube/icon/apps.png" id="app_icon"></button>
+        <button type="button" style="cursor: pointer;" id="button_bell"><span class="tooltip">알림</span><img src="../css/youtube/icon/bell.png" id="bell_icon"></button>
+        <button type="button" style="cursor: pointer;" id="button_user"><img src="../css/youtube/icon/user.PNG" id="user_icon"></button>
+    </div>
+    <div id="title_left">
+        <button type="button" id="button_menu" onclick="open_sidebar()"><img src="../css/youtube/icon/menu.png" id="menu_icon"></button>
+        <button type="button" style="cursor: pointer;" id="button_home"><img src="../css/youtube/icon/home.png" id="home_icon"><br>홈</button>
+        <button type="button" style="cursor: pointer;" id="button_compass"><img src="../css/youtube/icon/compass.png" id="compass_icon"><br>탐색</button>
+        <button type="button" style="cursor: pointer;" id="button_subscribe"><img src="../css/youtube/icon/subscribe.png" id="subscribe_icon"><br>구독</button>
+        <button type="button" style="cursor: pointer;" id="button_storage"><img src="../css/youtube/icon/storage.png" id="storage_icon"><br>보관함</button>
+
+        <button type="button" class="sidebutton"><img src="../css/youtube/icon/home.png" class="sideicon">홈</button> 
+        <button type="button" class="sidebutton"><img src="../css/youtube/icon/compass.png" class="sideicon">탐색</button>
+        <button type="button" class="sidebutton"><img src="../css/youtube/icon/subscribe.png" class="sideicon">구독</button>
+        <button type="button" class="sidebutton"><img src="../css/youtube/icon/storage.png" class="sideicon">보관함</button> 
+        <button type="button" class="sidebutton"><img src="../css/youtube/icon/compass.png" class="sideicon">시청기록</button>
+        <button type="button" class="sidebutton"><img src="../css/youtube/icon/subscribe.png" class="sideicon">나중에 볼 동영상</button>
+    </div>
+
+    
+    <div class ="container">
+        <div class = "content">
+                <div class="item"><a href="#">
+                        <img src="../css/youtube/icon/1.png" class="video">
+                        <button type="button" class="button_clock">
+                                <div class="v_space">
+                                        <div class="video_tooltip">나중에 볼 동영상</div>
+                                </div>
+                                <img src="../css/youtube/icon/clock.png" class="clock">
+                        </button>
+                        <button type="button" class="button_list">
+                                <div class="v_space">
+                                        <div class="video_tooltip">목록에 추가</div>
+                                </div>
+                                <img src="../css/youtube/icon/list.png" class="list"></button>
+                </div>
+                <div class = "item_bottom">
+                        <img src="../css/youtube/icon/Thum.png" class="Thumbnail">
+                        <div class="Thum_title">동영상 제목 <br> 페이지이름 <br> 조회수 00회 n주전</div></a>
+                </div>
+        </div>
+        <div class = "content">
+                <div class="item"><a href="#">
+                        <img src="../css/youtube/icon/2.png" class="video">
+                        <button type="button" class="button_clock">
+                                <div class="v_space">
+                                        <div class="video_tooltip">나중에 볼 동영상</div>
+                                </div>
+                                <img src="../css/youtube/icon/clock.png" class="clock">
+                        </button>
+                        <button type="button" class="button_list">
+                                <div class="v_space">
+                                        <div class="video_tooltip">목록에 추가</div>
+                                </div>
+                                <img src="../css/youtube/icon/list.png" class="list"></button>
+                </div>
+                <div class = "item_bottom">
+                        <img src="../css/youtube/icon/Thum.png" class="Thumbnail">
+                        <div class="Thum_title">동영상 제목 <br> 페이지이름 <br> 조회수 00회 n주전</div></a>
+                </div>
+        </div><div class = "content">
+                <div class="item"><a href="#">
+                        <img src="../css/youtube/icon/3.png" class="video">
+                        <button type="button" class="button_clock">
+                                <div class="v_space">
+                                        <div class="video_tooltip">나중에 볼 동영상</div>
+                                </div>
+                                <img src="../css/youtube/icon/clock.png" class="clock">
+                        </button>
+                        <button type="button" class="button_list">
+                                <div class="v_space">
+                                        <div class="video_tooltip">목록에 추가</div>
+                                </div>
+                                <img src="../css/youtube/icon/list.png" class="list"></button>
+                </div>
+                <div class = "item_bottom">
+                        <img src="../css/youtube/icon/Thum.png" class="Thumbnail">
+                        <div class="Thum_title">동영상 제목 <br> 페이지이름 <br> 조회수 00회 n주전</div></a>
+                </div>
+        </div><div class = "content">
+                <div class="item"><a href="#">
+                        <img src="../css/youtube/icon/4.png" class="video">
+                        <button type="button" class="button_clock">
+                                <div class="v_space">
+                                        <div class="video_tooltip">나중에 볼 동영상</div>
+                                </div>
+                                <img src="../css/youtube/icon/clock.png" class="clock">
+                        </button>
+                        <button type="button" class="button_list">
+                                <div class="v_space">
+                                        <div class="video_tooltip">목록에 추가</div>
+                                </div>
+                                <img src="../css/youtube/icon/list.png" class="list"></button>
+                </div>
+                <div class = "item_bottom">
+                        <img src="../css/youtube/icon/Thum.png" class="Thumbnail">
+                        <div class="Thum_title">동영상 제목 <br> 페이지이름 <br> 조회수 00회 n주전</div></a>
+                </div>
+        </div><div class = "content">
+                <div class="item"><a href="#">
+                        <img src="../css/youtube/icon/5.png" class="video">
+                        <button type="button" class="button_clock">
+                                <div class="v_space">
+                                        <div class="video_tooltip">나중에 볼 동영상</div>
+                                </div>
+                                <img src="../css/youtube/icon/clock.png" class="clock">
+                        </button>
+                        <button type="button" class="button_list">
+                                <div class="v_space">
+                                        <div class="video_tooltip">목록에 추가</div>
+                                </div>
+                                <img src="../css/youtube/icon/list.png" class="list"></button>
+                </div>
+                <div class = "item_bottom">
+                        <img src="../css/youtube/icon/Thum.png" class="Thumbnail">
+                        <div class="Thum_title">동영상 제목 <br> 페이지이름 <br> 조회수 00회 n주전</div></a>
+                </div>
+        </div><div class = "content">
+                <div class="item"><a href="#">
+                        <img src="../css/youtube/icon/6.png" class="video">
+                        <button type="button" class="button_clock">
+                                <div class="v_space">
+                                        <div class="video_tooltip">나중에 볼 동영상</div>
+                                </div>
+                                <img src="../css/youtube/icon/clock.png" class="clock">
+                        </button>
+                        <button type="button" class="button_list">
+                                <div class="v_space">
+                                        <div class="video_tooltip">목록에 추가</div>
+                                </div>
+                                <img src="../css/youtube/icon/list.png" class="list"></button>
+                </div>
+                <div class = "item_bottom">
+                        <img src="../css/youtube/icon/Thum.png" class="Thumbnail">
+                        <div class="Thum_title">동영상 제목 <br> 페이지이름 <br> 조회수 00회 n주전</div></a>
+                </div>
+        </div><div class = "content">
+                <div class="item"><a href="#">
+                        <img src="../css/youtube/icon/7.png" class="video">
+                        <button type="button" class="button_clock">
+                                <div class="v_space">
+                                        <div class="video_tooltip">나중에 볼 동영상</div>
+                                </div>
+                                <img src="../css/youtube/icon/clock.png" class="clock">
+                        </button>
+                        <button type="button" class="button_list">
+                                <div class="v_space">
+                                        <div class="video_tooltip">목록에 추가</div>
+                                </div>
+                                <img src="../css/youtube/icon/list.png" class="list"></button>
+                </div>
+                <div class = "item_bottom">
+                        <img src="../css/youtube/icon/Thum.png" class="Thumbnail">
+                        <div class="Thum_title">동영상 제목 <br> 페이지이름 <br> 조회수 00회 n주전</div></a>
+                </div>
+        </div><div class = "content">
+                <div class="item"><a href="#">
+                        <img src="../css/youtube/icon/8.png" class="video">
+                        <button type="button" class="button_clock">
+                                <div class="v_space">
+                                        <div class="video_tooltip">나중에 볼 동영상</div>
+                                </div>
+                                <img src="../css/youtube/icon/clock.png" class="clock">
+                        </button>
+                        <button type="button" class="button_list">
+                                <div class="v_space">
+                                        <div class="video_tooltip">목록에 추가</div>
+                                </div>
+                                <img src="../css/youtube/icon/list.png" class="list"></button>
+                </div>
+                <div class = "item_bottom">
+                        <img src="../css/youtube/icon/Thum.png" class="Thumbnail">
+                        <div class="Thum_title">동영상 제목 <br> 페이지이름 <br> 조회수 00회 n주전</div></a>
+                </div>
+        </div>
+    </div>
+    <script>
+            function open_sidebar(){
+                var indicate = document.getElementsByClassName("sidebutton");
+                var l = indicate.length;
+                if(document.getElementById("title_left").style.width == '250px'){
+                        
+                        document.getElementById("title_left").style.width = '80px';
+                        for(i=0; i<l; i++){
+                                indicate[i].style.left = "-250px";
+                        }
+
+                        
+                }
+                else{
+                        document.getElementById("title_left").style.width = '250px';
+                        for(i=0; i<l; i++){
+                                indicate[i].style.display = "";
+                                indicate[i].style.left = 0;
+                        }
+                        
+
+                }
+            }
+    </script>
+</body>

@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-image: url('./organizer-791939_1920.jpg');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+@font-face{
+    src:url("./BRLNSDB.TTF");
+    font-family: "logo";
+}
+
+@font-face{
+    src:url("./BMJUA_ttf.ttf");
+    font-family: "yoon";
+}
+
+div, ul, li, a, header{
+    box-sizing: border-box;
+}
+
+#main{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#logo{
+    position: absolute;
+    top:20%;
+    left: 50%;
+    font-size: 600%;
+    font-family: logo;
+    color:#FF0558;
+    transform:translateX(-50%)
+}
+
+#signUp{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform:translateX(-50%);
+    width: 16%;
+    height: 5%;
+    border:1px solid white;
+    border-radius: 30px;
+    color:white;
+    font-size: 150%;
+    font-family: yoon;
+    background-color: rgba( 0, 0, 0, 0.8 );
+}
+
+#signIn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translateX(-50%);
+    width: 16%;
+    height: 5%;
+    border:1px solid white;
+    border-radius: 30px;
+    color:white;
+    font-size: 150%;
+    font-family: yoon;
+    background-color: rgba( 0, 0, 0, 0.8 );
+}
+
+#signUp:hover{
+    background-color: white;
+    color:black;
+    cursor: pointer;
+}
+
+#signIn:hover{
+    background-color: white;
+    color:black;
+    cursor: pointer;
+}

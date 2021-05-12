@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/drag and drop game.css">
+</head>
+
+<body>
+    <div id="left">
+        <div class="dropNum">
+            <div class="numbox_top">1</div>
+            <div class="numbox_top">2</div>
+            <div class="numbox_top">3</div>
+            <div class="numbox_top">4</div>
+            <div class="numbox_top">5</div>
+            <div class="numbox_top">6</div>
+            <div class="numbox_top">7</div>
+            <div class="numbox_top">8</div>
+            <div class="numbox_top">9</div>
+        </div>
+        <div id="start_box">
+            <input type="button" id="start"value="start" onclick="start()">
+        </div>
+        <div class="dragNum">
+            <div class="numbox_bottom" id="1" draggable="true">시작을 눌러주세요</div>
+            <div class="numbox_bottom" id="2" draggable="true">시작을 눌러주세요</div>
+            <div class="numbox_bottom" id="3" draggable="true">시작을 눌러주세요</div>
+            <div class="numbox_bottom" id="4" draggable="true">시작을 눌러주세요</div>
+            <div class="numbox_bottom" id="5" draggable="true">시작을 눌러주세요</div>
+            <div class="numbox_bottom" id="6" draggable="true">시작을 눌러주세요</div>
+            <div class="numbox_bottom" id="7" draggable="true">시작을 눌러주세요</div>
+            <div class="numbox_bottom" id="8" draggable="true">시작을 눌러주세요</div>
+            <div class="numbox_bottom" id="9" draggable="true">시작을 눌러주세요</div>
+        </div>
+    </div>
+    <div id="right">
+        <div id ="timer">00:00:00</div>
+        <div id ="record">record</div>
+        <div id ="gameName">drag & drop <br>game</div>
+    </div>
+
+    <script>
+            var count =0;
+            var dragtop = document.querySelectorAll(".dropNum");
+            var dropbottom = document.querySelectorAll(".dragNum");
+
+            dropbottom.forEach(elem=>{
+                elem.addEventListener("dragstart" ,dragStart);
+            });
+
+            dragtop.forEach(elem=>{
+                elem.addEventListener("dragenter", dragEnter);
+                elem.addEventListener("dragover", dragOver);
+                elem.addEventListener("dragleave", dragLeave);
+                elem.addEventListener("drop", drop);
+            })
+
+            function dragStart(event){
+                event.dataTransfer.setData("dragId", event.target.id);   //쿠키 사용
+                event.dataTransfer.setData("dragdata", event.target.innerText);
+            }
+
+
+            function dragEnter(event){
+                event.target.classList.add("top_hover");
+            }
+
+            function dragOver(event){
+                event.preventDefault();
+            }
+
+            function dragLeave(event){
+                event.target.classList.remove("top_hover");
+            }
+
+            function drop(event){
+                event.preventDefault();
+                if(event.target.innerText == event.dataTransfer.getData("dragdata")){
+                event.target.classList.remove("top_hover");
+                event.target.innerText ="★";
+
+                var dragId = event.dataTransfer.getData("dragId");
+                var drag = document.getElementById(dragId);
+                drag.style.visibility ="hidden";
+
+                count++;
+                if(count==9){
+                stopevent();
+                appendRecord();
+                document.getElementById("start").style.visibility = "visible";
+                count =0;
+                }
+                }
+                
+                event.target.classList.remove("top_hover");
+                
+            }
+
+
+            function start(){
+            document.getElementById("start").style.visibility = "hidden";
+            var num = [1,2,3,4,5,6,7,8,9];
+            var numlen = num.length;
+            var top_box = document.getElementsByClassName("numbox_top");
+            var box = document.getElementsByClassName("numbox_bottom");
+            document.getElementById("timer").innerText = "00::00:00";
+            startTime();
+            
+            for(i=0; i<top_box.length; i++){
+                top_box[i].innerText = num[i];
+            }
+
+            for(i=0; i<box.length; i++){
+                var random = Math.floor((Math.random()*numlen));
+                box[i].innerText = num[random];
+                box[i].style.display="inline-block";
+                box[i].style.visibility = "visible";
+                num.splice(random,1);
+                numlen--;
+            }
+        }
+
+        
+        var time;
+        function startTime(){
+            var clickedtime = new Date().getTime();
+            time = setInterval(function(){
+                var nowtime = new Date().getTime();  //현재의 시간을 저장해놓음
+                var newtime = new Date(nowtime - clickedtime);
+                var min = newtime.getMinutes();
+                var sec = newtime.getSeconds();
+                var milisec = newtime.getMilliseconds();
+
+                document.getElementById("timer").innerText = addZero(min) + ":" + addZero(sec) + ":" + addZero(parseInt(milisec/10));
+            },1);
+        }
+        
+        function addZero(num){
+            return (num<10 ? "0" + num : "" + num);
+        }
+
+        function stopevent(){
+            clearInterval(time);
+        }
+
+        function appendRecord(){
+            var time = document.getElementById("timer").innerText;
+            var record_score = document.createElement("div");
+            record_score.innerText = time;
+            record_score.className = "record_score";
+            var record = document.getElementById("record");
+            record.appendChild(record_score);
+    
+        }
+
+
+
+        
+    </script>
+    
+</body>
+</html>
+
+
+
+ <!--window.onload = function(){
+            
+    var box = document.querySelector(".numbox_bottom");
+
+    box.ondragstart = function(eventTarget){
+    }
+
+    var goal = document.getElementsByClassName("numbox_top");
+
+    goal.ondragover = function(eventTarget){
+        eventTarget.preventDefault();
+    }
+
+    goal.ondrop = function(eventTarget){
+        goal.innerText = box.innerText;
+        
+    }
+}-->

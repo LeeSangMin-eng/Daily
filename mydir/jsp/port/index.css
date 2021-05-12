@@ -1,0 +1,683 @@
+@font-face{
+    src:url("./css/index/Blueberry\ .ttf");
+    font-family: "title";
+}
+
+@font-face{
+    src:url("./css/index/잘풀리는하루\ Medium.ttf");
+    font-family: "h_text";
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: sans-serif;
+}
+
+div, section, ul, li, a, header{
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    position: fixed;
+    z-index: 10;
+}
+#menu li{
+    list-style: none;
+    display: inline-block;
+    margin:20px;
+}
+
+#menu li a{
+    color:#000;
+    text-decoration: none;
+    font-size: 150%;
+}
+
+#logo{
+    color: #000;
+    text-decoration: none;
+    padding:0;
+    margin:20px;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+#home{
+    background-color: #ffb6b9;
+    position: relative;
+    text-align: center;
+}
+
+#about{
+    background-color: #fae3d9;
+    position: relative;
+}
+
+#portfolio{
+    background-color: #bbded6;
+    position: relative;
+}
+
+#contact{
+    background-color: #8ac6d1;
+    height: 50vh;
+    position: relative;
+}
+
+h1{
+    position: absolute;
+    left:4%;
+    font-size: 450%;
+    color:#ffb6b9;
+}
+h1 span{
+    position: absolute;
+    left:0;
+    top:0;
+    height: 100%;
+    width: 0;
+    background-color: snow;
+    animation: overlay 2s ease forwards;
+}
+h1:nth-child(1){
+    margin-top: 20%;
+    margin-left:20%;
+    animation: text_reveal 1s ease forwards;
+    animation-delay: 1s;
+}
+h1:nth-child(2){
+    margin-top: 30%;
+    margin-left:5%;
+    animation: text_reveal 1s ease forwards;
+    animation-delay: 3s;
+}
+
+h1:nth-child(2) span{
+    animation: overlay 2s ease forwards;
+    animation-delay: 2s;
+}
+
+@keyframes overlay{
+    50%{
+        width: 100%;
+        left:0;
+    }
+
+    100%{
+        width: 0;
+        left:100%;
+    }
+}
+
+@keyframes text_reveal{
+    100%{
+        color:#FFFAF7;
+        text-shadow: slategrey 0px 3px;
+    }
+}
+
+#down{
+    position: absolute;
+    top:80%;
+    width: 10%;
+    height: 10%;
+    left:45%;
+    font-size: 27px;
+    font-family: h_text;
+    background-color: #ffb6b9;
+    border: 1px #ffb6b9;
+    color:#ffb6b9;
+    animation: button_reveal 1s ease forwards;
+    animation-delay: 4s;
+}
+
+#down:hover{
+    box-shadow: black 2px 2px;
+    text-shadow: black 2px 2px;
+}
+
+@keyframes button_reveal{
+    100%{
+        color: white;
+        border: solid white 3px;
+    }
+}
+
+#aboutMe{
+    position: absolute;
+    top:12%;
+    left:2%;
+    width: 95%;
+    height: 85%;
+    background-color: #FFFAF7;
+    box-shadow: slategrey 5px 5px;
+}
+
+#aboutTitle{
+    position: absolute;
+    left: 1%;
+    font-size: 50px;
+    box-shadow: slategrey 0px 5px;
+    font-family: title;
+    
+}
+
+#aboutMain{
+    position: absolute;
+    top:20%;
+    left:1%;
+    width: 99%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#aboutLeft{
+    list-style: none;
+    display: inline-block;
+    width: 33%;
+    border-right: solid slategrey;
+}
+
+#mypicture{
+    position: absolute;
+    margin-left:5%; 
+    margin-top:1%; 
+    border-radius: 30%;
+    width: 15%;
+    height: 30%;
+    overflow: hidden;
+}
+
+#mypicture img{
+    width: 100%;
+    height: 100%;
+}
+
+#meDescribe{
+    position: absolute;
+    margin-left:2%;
+    margin-top:15%;
+    width:33%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#meDescribe li{
+    width: 40%;
+    font-family: sans-serif;
+    font-size: 20px;
+    list-style: none;
+    border-right: black 1px;
+    margin-top:5%;
+}
+
+.index{
+    font-weight: 1000;
+}
+
+#aboutRight{
+    list-style: none;
+    margin-left: 2%;
+    width:70%;
+}
+
+#aboutRight ul li{
+    list-style:none;
+}
+
+.desTitle{
+    font-weight: 1000;
+    margin-bottom: 30px;
+}
+
+.desMain{
+    margin-bottom: 23%;
+}
+
+#myPortfolio{
+    position: absolute;
+    top:12%;
+    left:2%;
+    width: 95%;
+    height: 80%;
+    background-color: #FFFAF7;
+    box-shadow: slategrey 5px 5px;
+}
+
+#portfolioTitle{
+    position: absolute;
+    left: 1%;
+    font-size: 50px;
+    box-shadow: slategrey 0px 5px;
+    font-family: title;
+}
+
+#leftArrow{
+    position: absolute;
+    top:45%;
+    left:5%;
+    display: inline-block;
+    width: 5%;
+}
+
+#contents{
+    position: absolute;
+    top:25%;
+    left:19%;
+    display: inline-block;
+}
+
+#rightArrow{
+    position: absolute;
+    top:45%;
+    right:5%;
+    display: inline-block;
+    width: 5%;
+    
+}
+
+.container{
+    width: 180vw;
+    transition: all 0.5s;
+}
+
+.inner{
+    width: 59.95vw;
+    height: 50vh;
+    float: left;
+}
+
+#view{
+    width: 60.1vw;
+    overflow: hidden;
+}
+
+.myWork{
+    width: 100%;
+    height: 80%;
+    border: solid black 3px;
+    }
+
+.myWork:hover{
+    box-shadow: black 3px 3px;
+}
+
+.inner div{
+    padding-top: 1%;
+    font-family: h_text;
+    letter-spacing: 0.5px;
+}
+
+#contact div{
+    position: absolute;
+    left:40%;
+    top:5%;
+    font-size: 50px;
+    font-family: title;
+    color: #FFFAF7;
+    text-shadow: slategrey 1px 1px;
+}
+
+#mypicture2{
+    position: absolute;
+    margin-left:-20%; 
+    margin-top:9%; 
+    border-radius: 30%;
+    width: 15%;
+    height: 33%;
+    overflow: hidden;
+    border: solid white 3px;
+}
+
+#mypicture2 img{
+    width: 100%;
+    height: 100%;
+}
+
+#contact_text{
+    position: absolute;
+    left:40%;
+    top:40%;
+}
+
+#contact_text li{
+    list-style: none;
+    color: white;
+    font-size: 130%;
+    font-family: h_text;
+    margin-bottom: 3%;
+    text-shadow: slategrey 1px 1px;
+}
+
+#contact_text li:nth-child(1){
+    margin-bottom: 15%;
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    header{
+        width: 100%;
+        display: flex;
+        padding: 1% 5%;
+        position: fixed;
+        z-index: 10;
+    }
+    #menu{
+        width: 70%;
+    }
+
+    #menu li{
+        list-style: none;
+        display: inline-block;
+        margin:1%;
+    }
+    
+    #menu li a{
+        color:#000;
+        text-decoration: none;
+        font-size: 100%;
+    }
+    h1{
+        position: absolute;
+        left:4%;
+        font-size: 130%;
+        color:#ffb6b9;
+    }
+    h1 span{
+        position: absolute;
+        left:0;
+        top:0;
+        height: 100%;
+        width: 0;
+        background-color: snow;
+        animation: overlay 2s ease forwards;
+    }
+    h1:nth-child(1){
+        margin-top: 40%;
+        margin-left:15%;
+        animation: text_reveal 1s ease forwards;
+        animation-delay: 1s;
+    }
+    h1:nth-child(2){
+        margin-top: 70%;
+        margin-left:0%;
+        animation: text_reveal 1s ease forwards;
+        animation-delay: 3s;
+    }
+    
+    h1:nth-child(2) span{
+        animation: overlay 2s ease forwards;
+        animation-delay: 2s;
+    }
+    
+    @keyframes overlay{
+        50%{
+            width: 100%;
+            left:0;
+        }
+    
+        100%{
+            width: 0;
+            left:100%;
+        }
+    }
+    
+    @keyframes text_reveal{
+        100%{
+            color:#FFFAF7;
+            text-shadow: slategrey 0px 3px;
+        }
+    }
+    
+    #down{
+        position: absolute;
+        top:60%;
+        width: 30%;
+        height: 10%;
+        left:35%;
+        font-size: 100%;
+        font-family: h_text;
+        background-color: #ffb6b9;
+        border: 1% #ffb6b9;
+        color:#ffb6b9;
+        animation: button_reveal 1s ease forwards;
+        animation-delay: 4s;
+    }
+    
+    #down:hover{
+        box-shadow: black 2px 2px;
+        text-shadow: black 2px 2px;
+    }
+    
+    @keyframes button_reveal{
+        100%{
+            color: white;
+            border: solid white 3px;
+        }
+    }
+    
+    #aboutMe{
+        position: absolute;
+        top:12%;
+        left:2%;
+        width: 95%;
+        height: 85%;
+        background-color: #FFFAF7;
+        box-shadow: slategrey 5px 5px;
+    }
+    
+    #aboutTitle{
+        position: absolute;
+        left: 1%;
+        font-size: 200%;
+        box-shadow: slategrey 0px 5px;
+        font-family: title;
+        
+    }
+    
+    #aboutMain{
+        position: absolute;
+        top:20%;
+        left:1%;
+        width: 99%;
+        height: 70%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #aboutLeft{
+        list-style: none;
+        display: inline-block;
+        width: 33%;
+        border-right: solid slategrey;
+    }
+    
+    #mypicture{
+        position: absolute;
+        margin-left:5%; 
+        margin-top:1%; 
+        border-radius: 30%;
+        width: 15%;
+        height: 30%;
+        overflow: hidden;
+    }
+    
+    #mypicture img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    #meDescribe{
+        position: absolute;
+        margin-left:2%;
+        margin-top:50%;
+        width:33%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #meDescribe li{
+        width: 40%;
+        font-family: sans-serif;
+        font-size: 50%;
+        list-style: none;
+        border-right: black 1px;
+        margin-top:5%;
+    }
+    
+    .index{
+        font-weight: 1000;
+    }
+    
+    #aboutRight{
+        list-style: none;
+        margin-left: 2%;
+        width:70%;
+    }
+    
+    #aboutRight ul li{
+        list-style:none;
+    }
+    
+    .desTitle{
+        font-weight: 1000;
+        margin-bottom: 30px;
+    }
+    
+    .desMain{
+        margin-bottom: 23%;
+    }
+    
+    #myPortfolio{
+        position: absolute;
+        top:12%;
+        left:2%;
+        width: 95%;
+        height: 80%;
+        background-color: #FFFAF7;
+        box-shadow: slategrey 5px 5px;
+    }
+    
+    #portfolioTitle{
+        position: absolute;
+        left: 1%;
+        font-size: 50px;
+        box-shadow: slategrey 0px 5px;
+        font-family: title;
+    }
+    
+    #leftArrow{
+        position: absolute;
+        top:45%;
+        left:5%;
+        display: inline-block;
+        width: 5%;
+    }
+    
+    #contents{
+        position: absolute;
+        top:25%;
+        left:19%;
+        display: inline-block;
+    }
+    
+    #rightArrow{
+        position: absolute;
+        top:45%;
+        right:5%;
+        display: inline-block;
+        width: 5%;
+        
+    }
+    
+    .container{
+        width: 180vw;
+        transition: all 0.5s;
+    }
+    
+    .inner{
+        width: 59.95vw;
+        height: 50vh;
+        float: left;
+    }
+    
+    #view{
+        width: 60.1vw;
+        overflow: hidden;
+    }
+    
+    .myWork{
+        width: 100%;
+        height: 80%;
+        border: solid black 3px;
+        }
+    
+    .myWork:hover{
+        box-shadow: black 3px 3px;
+    }
+    
+    .inner div{
+        padding-top: 1%;
+        font-family: h_text;
+        letter-spacing: 0.5px;
+    }
+    
+    #contact div{
+        position: absolute;
+        left:15%;
+        top:5%;
+        font-size: 50px;
+        font-family: title;
+        color: #FFFAF7;
+        text-shadow: slategrey 1px 1px;
+    }
+    
+    #mypicture2{
+        position: absolute;
+        margin-left:2%; 
+        margin-top:30%; 
+        border-radius: 30%;
+        width: 15%;
+        height: 33%;
+        overflow: hidden;
+        border: solid white 3px;
+    }
+    
+    #mypicture2 img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    #contact_text{
+        position: absolute;
+        left:40%;
+        top:40%;
+    }
+    
+    #contact_text li{
+        list-style: none;
+        color: white;
+        font-size: 100%;
+        font-family: h_text;
+        margin-bottom: 3%;
+        text-shadow: slategrey 1px 1px;
+    }
+    
+    #contact_text li:nth-child(1){
+        margin-bottom: 15%;   
+    }
+
+};

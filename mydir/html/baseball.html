@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/baseball/basball.css">
+</head>
+<body>
+    <div id=title>숫자야구게임</div>
+    <input id="first" value="" type="text">
+    <input id="second" value="" type="text">
+    <input id="third" value="" type="text"> <br><br>
+    
+    <input type="button" value="1" class="num_button" onclick="push(1)">
+    <input type="button" value="2" class="num_button" onclick="push(2)">
+    <input type="button" value="3" class="num_button" onclick="push(3)"><br>
+    <input type="button" value="4" class="num_button" onclick="push(4)">
+    <input type="button" value="5" class="num_button" onclick="push(5)">
+    <input type="button" value="6" class="num_button" onclick="push(6)"><br>
+    <input type="button" value="7" class="num_button" onclick="push(7)">
+    <input type="button" value="8" class="num_button" onclick="push(8)">
+    <input type="button" value="9" class="num_button" onclick="push(9)"><br>
+
+    <input type="button" value="난수생성" onclick="random()">
+    <input type="button" value="확인" onclick="check()">
+    <input type="button" value="지우기" onclick="erase()">
+
+    <script>
+        var random_number = [];
+        var count =0;
+
+        function push(number){                               // 숫자 입력
+            var num1 = document.getElementById("first");
+            var num2 = document.getElementById("second");
+            var num3 = document.getElementById("third");
+
+            if(num1.value==""){
+                num1.value = number;
+            }
+            else if(num2.value==""){
+                num2.value = number;
+            }
+            else if(num3.value == ""){
+                num3.value = number;
+            }
+
+        }
+
+        function random(){
+            if(random_number[0] != null){                       // 새로 난수 생성 시 기존 난수값 삭제
+                for(i=0; i<=2; i++){
+                    random_number.pop();
+                }
+            }
+            var num = Math.floor(1+(Math.random()*9));          // random_number 배열에 난수들 추가
+            random_number.push(num);                            
+            for(i=1; i<=2; i++){
+                num = Math.floor(1+(Math.random()*9));
+                random_number.push(num);
+                while(random_number[i-1]==random_number[i]){
+                    random_number.pop();
+                    num = Math.floor(1+(Math.random()*9));
+                    random_number.push(num);
+                }
+            }
+            while(random_number[0]==random_number[2]){
+                num = Math.floor(1+(Math.random()*9));
+                random_number.pop();
+                random_number.push(num);
+            }
+
+        }
+        
+        function check(){
+            var num1 = document.getElementById("first").value;
+            var num2 = document.getElementById("second").value;
+            var num3 = document.getElementById("third").value;
+            var title = document.getElementById("title");
+            var array =[num1, num2, num3];
+            var ball = 0;
+            var strike =0;
+
+            if(num1 == num2 || num1 == num3 || num2 == num3){     // 입력된 숫자 중복 확인
+                title.innerText = ('중복된 숫자입니다.');
+                document.getElementById("first").value = document.getElementById("second").value = document.getElementById("third").value = "";
+            }
+
+            else{
+
+
+            for(i=0; i<=2; i++){
+                for(j=0; j<=2; j++){
+                    if(random_number[i]==array[j]){
+                        if(i==j){
+                            strike++;
+                        }
+                        else{
+                            ball++;
+                        }
+                    }
+                }
+            }
+
+            count++;
+
+
+            if(strike==3){
+                title.innerText = ('홈런~' + random_number[0] + random_number[1] + random_number[2]);
+            }
+            else{
+                if(count == 9){
+                title.innerText = ('실패! 정답은 : ' + random_number[0] + ' ' + random_number[1] + ' ' + random_number[2]);
+                count = 0;
+            }
+            else{
+            title.innerText = (strike + 'strike ' + (ball) + ' ball ' + (3-(ball+strike)) + ' out ' + count +' 회차 ');
+            }
+            }
+            document.getElementById("first").value = document.getElementById("second").value = document.getElementById("third").value = "";
+        }
+    
+        }
+
+        function erase(){
+            var num1 = document.getElementById("first");
+            var num2 = document.getElementById("second");
+            var num3 = document.getElementById("third");
+
+            if(num3.value!=""){
+                num3.value = "";
+            }
+
+            else if(num2.value!=""){
+                num2.value = ""
+            }
+
+            else if(num1.value!=""){
+                num1.value = "";
+            }
+        }
+    </script>
+</body>
+</html>
