@@ -35,7 +35,7 @@ div, ul, li, a, header{
     position: absolute;
     top:20%;
     left: 50%;
-    font-size: 600%;
+    font-size: 700%;
     font-family: logo;
     color:#FF0558;
     transform:translateX(-50%)
@@ -81,4 +81,58 @@ div, ul, li, a, header{
     background-color: white;
     color:black;
     cursor: pointer;
+}
+
+
+@media all and (min-width : 767px) and (max-width : 1024px) {
+
+    #logo{
+        top:22%;
+        font-size: 550%;
+    }
+
+    #signUp{
+        width: 20%;
+    }
+
+    #signIn{
+        width: 20%;
+    }
+    
+}
+
+@media all and (max-width : 767px) and (min-width : 480px) {
+    
+    #logo{
+        top:24%;
+        font-size: 450%;
+    }
+
+    #signUp{
+        width: 30%;
+    }
+
+    #signIn{
+        width: 30%;
+    }
+
+}
+
+@media all and (max-width : 480px) and (min-width : 240px){
+    
+    #logo{
+        top:24%;
+        font-size: 400%;
+    }
+
+    #signUp{
+        font-size: 130%;
+        width: 35%;
+    }
+
+    #signIn{
+        font-size: 130%;
+        width: 35%;
+    }
+
 }

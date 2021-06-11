@@ -39,7 +39,7 @@ div, ul, li, a, header{
 
 #title{
     color: white;
-    font-size: 200%;
+    font-size: 2rem;
     font-family: yoon;
     padding-left: 3%;
     margin-bottom: 3%;
@@ -50,13 +50,13 @@ div, ul, li, a, header{
     top:25%;
     left:50%;
     transform: translateX(-50%);
-    width: 30vw;
+    width: 31rem;
     height: 30vh;
 }
 
 #signUpform{
     border-radius: 10px;
-    width: 100%;
+    width: 31rem;
     height: 100%;
 }
 
@@ -68,7 +68,7 @@ div, ul, li, a, header{
     border: 0px solid white;
     border-bottom: 3px solid grey;
     padding-left: 3%;
-    font-size: 150%;
+    font-size: 1.4rem;
     font-family: yoon;
 }
 
@@ -78,7 +78,7 @@ div, ul, li, a, header{
     padding-left: 3%;
     border: 0px solid white;  
     border-bottom: 3px solid grey; 
-    font-size: 150%;
+    font-size: 1.4rem;
     color:black;
     background-repeat: no-repeat;
     background-position-x: 95%;
@@ -93,7 +93,7 @@ div, ul, li, a, header{
     border-bottom-right-radius: 10px;
     border: 0px solid white;
     padding-left: 3%;
-    font-size: 150%;
+    font-size: 1.4rem;
     color:black;
     background-repeat: no-repeat;
     background-position-x: 95%;
@@ -114,13 +114,137 @@ input[type=password]{
     top: 70%;
     left: 50%;
     transform:translateX(-50%);
-    width: 20%;
+    width: 20rem;
     height: 5%;
     border:none;
     border-radius: 30px;
     color:white;
-    font-size: 150%;
+    font-size: 1.4rem;
     font-family: yoon;
     background-color: rgba( 255, 5, 88, 0.8 );
     cursor: pointer;
+}
+
+#alram{
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform:translateX(-50%);
+    color:#FF0558;
+    font-size: 1.4rem;
+    font-family: yoon;
+}
+
+
+@media all and (min-width : 767px) and (max-width : 1024px) {
+    #title{
+        font-size: 1.7rem;
+    }
+    
+    #signUp{
+        width: 26rem;
+    }
+    
+    #signUpform{
+        width: 26rem;
+    }
+    
+    #id{
+        font-size: 1.1rem;
+    }
+    
+    #password{
+        font-size: 1.1rem;
+    }
+    
+    #passwordCheck{
+        font-size: 1.1rem;
+    }
+    
+    #create{
+        top:66%;
+        width: 16rem;
+        font-size: 1.1rem;
+    }
+
+    #alram{
+        top:62.5%;
+        font-size: 1.1rem;
+    }
+}
+
+@media all and (max-width : 767px) and (min-width : 480px) {
+
+    #title{
+        font-size: 1.4rem;
+    }
+    
+    #signUp{
+        width: 21rem;
+    }
+    
+    #signUpform{
+        width: 21rem;
+    }
+    
+    #id{
+        font-size: 1rem;
+    }
+    
+    #password{
+        font-size: 1rem;
+    }
+    
+    #passwordCheck{
+        font-size: 1rem;
+    }
+    
+    #create{
+        top:65%;
+        width: 12rem;
+        font-size: 1rem;
+    }
+
+    #alram{
+        top:61.5%;
+        font-size: 1rem;
+    }
+}
+
+@media all and (max-width : 480px) {
+
+    #title{
+        font-size: 1.1rem;
+    }
+    
+    #signUp{
+        width: 17rem;
+    }
+    
+    #signUpform{
+        width: 17rem;
+    }
+    
+    #id{
+        font-size: 0.9rem;
+    }
+    
+    #password{
+        font-size: 0.9rem;
+    }
+    
+    #passwordCheck{
+        font-size: 0.9rem;
+    }
+    
+    #create{
+        top:65%;
+        width: 8rem;
+        font-size: 0.9rem;
+    }
+
+    #alram{
+        top:61.5%;
+        font-size: 0.9rem;
+    }
 }

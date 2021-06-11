@@ -1,0 +1,296 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-image: url('./organizer-791939_1920.jpg');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
+}
+
+form{
+    height: 10%;
+    margin-top: 3%;
+}
+
+@font-face{
+    src:url("./BRLNSDB.TTF");
+    font-family: "logo";
+}
+
+@font-face{
+    src:url("./BMJUA_ttf.ttf");
+    font-family: "yoon";
+}
+
+div, ul, li, a, header{
+    box-sizing: border-box;
+}
+
+#mainBoard{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    width: 80rem;
+    height: 100%;
+}
+
+.board{
+    position: relative;
+    display: block;
+    width: 80rem;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#menu{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 5vh;
+    background-color: black;
+}
+
+#logo{
+    position: fixed;
+    bottom:1%;
+    left: 1%;
+    font-size: 150%;
+    font-family: logo;
+    color:#FF0558;
+    cursor: pointer;
+}
+
+#add{
+    position: fixed;
+    bottom:-1.4%;
+    left: 50%;
+    font-size: 400%;
+    font-family: logo;
+    color:#FF0558;
+    transform:translateX(-50%);
+    cursor: pointer;
+}
+
+#Logout{
+    position: fixed;
+    bottom:1%;
+    right: 1%;
+    font-size: 150%;
+    font-family: logo;
+    color:white;
+    cursor: pointer;
+}
+
+.date{
+    position: absolute;
+    left: 3%;
+    top:40%;
+    font-size: 1.4rem;
+    font-family: yoon;
+}
+
+.start{
+    position: absolute;
+    left: 20%;
+    top:40%;
+    font-size: 1.4rem;
+    font-family: yoon;
+}
+
+.tilde{
+    position: absolute;
+    left: 26.5%;
+    top:40%;
+    font-size: 1.4rem;
+    font-family: yoon;
+}
+
+.end{
+    position: absolute;
+    left: 30%;
+    top:40%;
+    font-size: 1.4rem;
+    font-family: yoon;
+}
+
+.toDo{
+    position: absolute;
+    left: 40%;
+    top:40%;
+    font-size: 1.4rem;
+    font-family: yoon;
+}
+
+.board:hover .modify{
+    visibility: visible;
+}
+
+.board:hover .remove{
+    visibility: visible;
+}
+
+.modify{
+    position: absolute;
+    left: 80%;
+    top:30%;
+    width: 7%;
+    height: 50%;
+    border-radius: 10px;
+    color: white;
+    background-color: #FF0558;
+    font-size: 1.4rem;
+    font-family: yoon;
+    visibility: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+
+.remove{
+    position: absolute;
+    left: 90%;
+    top:30%;
+    width: 7%;
+    height: 50%;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    font-size: 1.4rem;
+    font-family: yoon;
+    visibility: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+
+.emptyBoard{
+    height: 5%;
+}
+
+@media all and (min-width : 1024px) and (max-width : 1324px) {
+    #mainBoard{
+        width: 60rem;
+    }
+    
+    .board{
+        width: 60rem;
+    }
+    
+    .date{
+        font-size: 1.2rem;
+    }
+    
+    .start{
+        left: 25%;
+        font-size: 1.2rem;
+    }
+    
+    .tilde{
+        left: 35%;
+        font-size: 1.2rem;
+    }
+    
+    .end{
+        left: 40%;
+        font-size: 1.2rem;
+    }
+    
+    .toDo{
+        left: 55%;
+        font-size: 1.2rem;
+    }
+    
+    .modify{
+        font-size: 1.2rem;
+    }
+    
+    .remove{
+        font-size: 1.2rem;
+    }
+
+    
+}
+@media all and (max-width : 1024px) and (min-width : 670px) {
+    #mainBoard{
+        width: 40rem;
+    }
+    
+    .board{
+        width: 40rem;
+    }
+    .date{
+        font-size: 1.1rem;
+    }
+    
+    .start{
+        left: 25%;
+        font-size: 1.2rem;
+    }
+    
+    .tilde{
+        left: 35%;
+        font-size: 1.2rem;
+    }
+    
+    .end{
+        left: 40%;
+        font-size: 1.2rem;
+    }
+    
+    .toDo{
+        left: 55%;
+        font-size: 1.2rem;
+    }
+    
+    .modify{
+        font-size: 1.1rem;
+    }
+    
+    .remove{
+        font-size: 1.1rem;
+    }
+
+}
+
+@media all and (max-width : 670px) {
+    #mainBoard{
+        width: 25rem;
+    }
+    
+    .board{
+        width: 25rem;
+    }
+    .date{
+        font-size: 0.9rem;
+    }
+    
+    .start{
+        left: 25%;
+        font-size: 0.9rem;
+    }
+    
+    .tilde{
+        left: 35%;
+        font-size: 0.9rem;
+    }
+    
+    .end{
+        left: 40%;
+        font-size: 0.9rem;
+    }
+    
+    .toDo{
+        left: 55%;
+        font-size: 0.9rem;
+    }
+    
+    .modify{
+        font-size: 0.9rem;
+    }
+    
+    .remove{
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,66 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+@font-face{
+    src:url("./BRLNSDB.TTF");
+    font-family: "logo";
+}
+
+@font-face{
+    src:url("./BMJUA_ttf.ttf");
+    font-family: "yoon";
+}
+
+div, ul, li, a, header{
+    box-sizing: border-box;
+}
+
+#main{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#date{
+    position: absolute;
+    left: 3%;
+    top: 5%;
+    width: 90vw;
+    font-family: yoon;
+}
+
+
+#start{
+    position: absolute;
+    left: 3%;
+    top: 15%;
+    width: 40vw;
+    font-family: yoon;
+}
+
+#end{
+    position: absolute;
+    left: 53%;
+    top: 15%;
+    width: 40vw;
+    font-family: yoon;
+}
+
+#content{
+    position: absolute;
+    left: 3%;
+    top: 25%;
+    width: 90vw;
+    height: 50vh;
+    font-family: yoon;
+}
+
+#btn{
+    position: absolute;
+    left:3%;
+    top:80%;
+    width: 91vw;
+    font-family: yoon;
+}

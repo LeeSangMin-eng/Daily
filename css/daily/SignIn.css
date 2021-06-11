@@ -40,7 +40,7 @@ div, ul, li, a, header{
 #title{
     display: inline-block;
     color: white;
-    font-size: 200%;
+    font-size: 2rem;
     font-family: yoon;
     padding-left: 3%;
     margin-bottom: 3%;
@@ -49,10 +49,9 @@ div, ul, li, a, header{
 #autoLogin{
     display: inline-block;
     margin-left: 40%;
-    width: 40%;
     height: 200%;
     text-align: left;
-    font-size: 200%;
+    font-size: 1.9rem;
     font-family: yoon;
     color: rgba(134, 134, 134, 0.747);
     cursor: pointer;
@@ -67,7 +66,7 @@ div, ul, li, a, header{
     top:25%;
     left:50%;
     transform: translateX(-50%);
-    width: 30vw;
+    width: 31rem;
     height: 30vh;
 }
 
@@ -77,7 +76,7 @@ div, ul, li, a, header{
 
 #signInform{
     border-radius: 10px;
-    width: 100%;
+    width: 31rem;
     height: 100%;
 }
 
@@ -89,7 +88,7 @@ div, ul, li, a, header{
     border: 0px solid white;
     border-bottom: 3px solid grey;
     padding-left: 3%;
-    font-size: 150%;
+    font-size: 1.4rem;
     font-family: yoon;
 }
 
@@ -100,7 +99,7 @@ div, ul, li, a, header{
     border-bottom-right-radius: 10px;
     border: 0px solid white;
     padding-left: 3%;
-    font-size: 150%;
+    font-size: 1.4rem;
     color:black;
     background-repeat: no-repeat;
     background-position-x: 95%;
@@ -118,16 +117,142 @@ input[type=password]{
 
 #login{
     position: absolute;
-    top: 55%;
+    top: 58%;
     left: 50%;
     transform:translateX(-50%);
-    width: 20%;
+    width: 20rem;
     height: 5%;
     border:none;
     border-radius: 30px;
     color:white;
-    font-size: 150%;
+    font-size: 1.4rem;
     font-family: yoon;
     background-color: rgba( 255, 5, 88, 0.8 );
     cursor: pointer;
+}
+
+#alram{
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform:translateX(-50%);
+    color:#FF0558;
+    font-size: 1.4rem;
+    font-family: yoon;
+}
+
+@media all and (min-width : 767px) and (max-width : 1024px) {
+    #title{
+        font-size: 1.7rem;
+    }
+    
+    #signIn{
+        width: 26rem;
+    }
+    
+    #signInform{
+        width: 26rem;
+    }
+
+    #autoLogin{
+        font-size: 1.7rem;
+        margin-left: 37%;
+    }
+    
+    #id{
+        font-size: 1.1rem;
+    }
+    
+    #password{
+        font-size: 1.1rem;
+    }
+    
+    #login{
+        top:56%;
+        width: 16rem;
+        font-size: 1.1rem;
+    }
+
+    #alram{
+        top:52%;
+        font-size: 1.1rem;
+    }
+}
+
+@media all and (max-width : 767px) and (min-width : 480px) {
+
+    #title{
+        font-size: 1.4rem;
+    }
+    
+    #signIn{
+        width: 21rem;
+    }
+    
+    #signInform{
+        width: 21rem;
+    }
+    
+    #autoLogin{
+        font-size: 1.4rem;
+        margin-left: 36%;
+    }
+
+    #id{
+        font-size: 1rem;
+    }
+    
+    #password{
+        font-size: 1rem;
+    }
+
+    #login{
+        top:53.5%;
+        width: 12rem;
+        font-size: 1rem;
+    }
+
+    #alram{
+        top:50.5%;
+        font-size: 1rem;
+    }
+}
+
+@media all and (max-width : 480px) {
+
+    #title{
+        font-size: 1.1rem;
+    }
+    
+    #signIn{
+        width: 17rem;
+    }
+    
+    #signInform{
+        width: 17rem;
+    }
+    
+    #autoLogin{
+        font-size: 1.1rem;
+        margin-left: 35%;
+    }
+
+    #id{
+        font-size: 0.9rem;
+    }
+    
+    #password{
+        font-size: 0.9rem;
+    }
+
+    #login{
+        top:53.5%;
+        width: 8rem;
+        font-size: 0.9rem;
+    }
+
+    #alram{
+        top:50.5%;
+        font-size: 0.9rem;
+    }
 }

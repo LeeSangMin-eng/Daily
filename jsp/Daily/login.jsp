@@ -18,20 +18,11 @@
     String autoLogin = request.getParameter("autoLogin");
     Cookie cookie = null;
 
-    int emptyId = 0;
-    int emptyPwd = 0;
     int noId = 0;
     int wrongPwd = 0;
     int done =0;
 
         try{
-            if(rId.equals("")){
-                emptyId++;
-            }
-            else if(rPassword.equals("")){
-                emptyPwd++;
-            }
-            else{
                 Class.forName("com.mysql.jdbc.Driver"); // dbms 설정
                 conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "ubuntun","1234"); //db 설정
 
@@ -54,15 +45,15 @@
                     else{
                         if(autoLogin != null){                     // 자동 로그인인 경우
                             cookie = new Cookie("autoId", rId);
-                            cookie.setMaxAge(100*365*24*60*60);
+                            cookie.setMaxAge(2147483647);
+                            cookie.setPath("/");
                             response.addCookie(cookie);
                             response.sendRedirect("Daily.jsp");
+                            session.setAttribute("id",rId);
                         }
-                        else{                    
-                            cookie = new Cookie("memberId", rId);     // 자동 로그인이 아닐 경우
-                            cookie.setMaxAge(100*365*24*60*60);
-                            response.addCookie(cookie);                   
+                        else{                                     
                             response.sendRedirect("Daily.jsp");
+                            session.setAttribute("id",rId);
                         }
 
 
@@ -70,7 +61,6 @@
                     
                 }
         
-        }
 
         } catch(Exception e){
             e.printStackTrace();
@@ -82,13 +72,7 @@
         }
 %>
 <script>
-    if(<%=emptyId%>==1){
-        alert("아이디를 입력해주세요.");
-    }
-    else if(<%=emptyPwd%>==1){
-        alert("비밀번호를 입력해주세요.");
-    }
-    else if(<%=noId%>==1){
+    if(<%=noId%>==1){
         alert("아이디가 존재하지 않습니다.");
     }
     else if(<%=wrongPwd%>==1){
